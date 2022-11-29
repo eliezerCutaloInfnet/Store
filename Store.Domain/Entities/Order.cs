@@ -1,9 +1,10 @@
-﻿using Store.Domain._shared;
+﻿using FluentValidation;
+using Store.Domain._shared;
 using Store.Domain.Enums;
 
 namespace Store.Domain.Entities
 {
-    public class Order : Entity
+    public class Order : Entity<Order>
     {
         #region Protected Fields
         
@@ -39,7 +40,31 @@ namespace Store.Domain.Entities
         {
             _orderProducts.Add(orderProduct);
         }
+
+        public void SetStatus(EOrderStatus status)
+        {
+            Status = status;
+        }
+
+        public override bool IsValid()
+        {
+            ValidateSurveyId();
+
+            AddErrors(Validate(this));
+
+            return ValidationResult.IsValid;
+        }
         #endregion Public Methods
 
+
+        #region Private Methods
+        private void ValidateSurveyId()
+        {
+            RuleFor(i => i.UserId)
+                .NotEmpty()
+                .WithMessage("Id of User cannot be empty.");
+        }
+
+        #endregion Private Methods
     }
 }

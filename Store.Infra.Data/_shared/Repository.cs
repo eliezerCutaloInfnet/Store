@@ -4,7 +4,7 @@ using Store.Infra.Data.Context;
 
 namespace Store.Infra.Data._shared
 {
-    public class Repository<T> : IRepository<T> where T : Entity
+    public class Repository<T> : IRepository<T> where T : Entity<T>
     {
         #region Protected fields
         
