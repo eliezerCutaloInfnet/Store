@@ -5,6 +5,7 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("StoreDb");
+if(connectionString == null) throw new Exception("Set connection string");
 
 // Add services to the container.
 builder.Services.ConfigureAutoMapper();

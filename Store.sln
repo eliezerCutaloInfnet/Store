@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9231C1A1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.DomainTests", "tests\Store.DomainTests\Store.DomainTests.csproj", "{FA432017-7E07-45D3-9AD4-2BE0B2935251}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.ApplicationTests", "Store.ApplicationTests\Store.ApplicationTests.csproj", "{6A954FD6-5146-40F6-B2AB-81407273CBFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.ApplicationTests", "tests\Store.ApplicationTests\Store.ApplicationTests.csproj", "{6A954FD6-5146-40F6-B2AB-81407273CBFC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Tests.Common", "Store.Tests.Common\Store.Tests.Common.csproj", "{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Tests.Common", "tests\Store.Tests.Common\Store.Tests.Common.csproj", "{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.API", "Store.API\Store.API.csproj", "{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}"
 EndProject

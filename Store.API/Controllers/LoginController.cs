@@ -9,6 +9,9 @@ using System.Net;
 
 namespace Store.API.Controllers
 {
+    /// <summary>
+    /// Login controller
+    /// </summary>
     [Route("api/[controller]")]
     public class LoginController : BaseController
     {
@@ -20,6 +23,10 @@ namespace Store.API.Controllers
 
         #region Public Constructors
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="loginService">Login service to be injected</param>
         public LoginController(ILoginAppService loginService)
         {
             _loginService = loginService;

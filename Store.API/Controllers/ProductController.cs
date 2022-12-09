@@ -10,11 +10,18 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace Store.API.Controllers
 {
+    /// <summary>
+    /// Controller to manage product
+    /// </summary>
     [Route("api/[controller]")]
     public class ProductController : BaseController
     {
         private readonly IProductAppService _productAppService;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="productAppService">Service to be injected</param>
         public ProductController(IProductAppService productAppService)
         {
             _productAppService = productAppService;
