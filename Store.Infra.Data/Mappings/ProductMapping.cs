@@ -30,6 +30,18 @@ namespace Store.Infra.Data.Mappings
                 .Property(p => p.Price)
                 .HasColumnType("decimal(18,2)")
                 .IsRequired();
+
+            builder
+                .Ignore(o => o.CascadeMode);
+
+            builder
+                .Ignore(o => o.ClassLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.RuleLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.ValidationResult);
         }
     }
 }

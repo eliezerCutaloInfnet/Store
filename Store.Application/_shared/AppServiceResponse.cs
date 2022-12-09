@@ -1,14 +1,28 @@
 ﻿namespace Store.Application._shared
 {
-    public class AppServiceResponse
+    public class AppServiceResponse<T> : IAppServiceResponse where T : class
     {
-        public AppServiceResponse(bool success, string message)
+        #region Constructors
+
+        public AppServiceResponse(T data, string message, bool success)
         {
-            Success = success;
+            Data = data;
             Message = message;
+            Success = success;
         }
 
-        public bool Success { get; set; }
+        protected AppServiceResponse()
+        {
+        }
+
+        #endregion Constructors
+
+        #region Properties
+
+        public T Data { get; set; }
         public string Message { get; set; }
+        public bool Success { get; set; }
+
+        #endregion Properties
     }
 }

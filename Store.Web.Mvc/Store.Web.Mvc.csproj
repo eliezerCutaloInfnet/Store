@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Store.CrossCuting.IoC\Store.Infra.IoC.csproj" />
+    <ProjectReference Include="..\Store.CrossCutting\Store.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

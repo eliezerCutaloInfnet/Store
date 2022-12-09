@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Infra.Data", "Store.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Application", "Store.Application\Store.Application.csproj", "{B969C0C4-8984-4463-B5B5-815F915CD948}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Infra.IoC", "Store.CrossCuting.IoC\Store.Infra.IoC.csproj", "{340AF17D-1AF9-4126-A704-D82F65D7C0B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Infra.CrossCutting", "Store.CrossCutting\Store.Infra.CrossCutting.csproj", "{340AF17D-1AF9-4126-A704-D82F65D7C0B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9231C1A1-36AC-4A14-A78C-7CEF677C8E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DomainTests", "tests\Store.DomainTests\Store.DomainTests.csproj", "{FA432017-7E07-45D3-9AD4-2BE0B2935251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.DomainTests", "tests\Store.DomainTests\Store.DomainTests.csproj", "{FA432017-7E07-45D3-9AD4-2BE0B2935251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.ApplicationTests", "Store.ApplicationTests\Store.ApplicationTests.csproj", "{6A954FD6-5146-40F6-B2AB-81407273CBFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.ApplicationTests", "Store.ApplicationTests\Store.ApplicationTests.csproj", "{6A954FD6-5146-40F6-B2AB-81407273CBFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Tests.Common", "Store.Tests.Common\Store.Tests.Common.csproj", "{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Tests.Common", "Store.Tests.Common\Store.Tests.Common.csproj", "{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.API", "Store.API\Store.API.csproj", "{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5A538F9-5CD1-4D37-B0FB-9CE197FFF70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A17BDB2-AE47-413D-A7CE-CA4D4473E7E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

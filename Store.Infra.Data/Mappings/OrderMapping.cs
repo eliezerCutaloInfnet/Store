@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Store.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Store.Infra.Data.Mappings
 {
@@ -31,6 +26,17 @@ namespace Store.Infra.Data.Mappings
                 .HasOne(o => o.User)
                 .WithMany(u => u.Orders)
                 .HasForeignKey(o => o.UserId);
+
+            builder
+                .Ignore(o => o.CascadeMode);
+
+            builder
+                .Ignore(o => o.ClassLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.RuleLevelCascadeMode);
+            builder
+                .Ignore(o => o.ValidationResult);
         }
     }
 }

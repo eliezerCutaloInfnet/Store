@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Store.DomainTests": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:53980;http://localhost:53981"
+    }
+  }
+}

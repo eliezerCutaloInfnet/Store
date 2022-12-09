@@ -1,9 +1,8 @@
-﻿namespace Store.Domain.Notifications
+﻿namespace Store.Application._shared
 {
     public class Notification
     {
         #region Constructors
-
         public Notification(string key, string message)
         {
             Key = key;

@@ -12,7 +12,7 @@ using Store.Infra.Data.Context;
 namespace Store.Infra.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221126212256_InitialMigration")]
+    [Migration("20221206221052_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

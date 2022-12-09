@@ -1,7 +1,8 @@
 ﻿using AutoFixture;
 using Moq;
+using Store.Application._shared;
 using Store.Application.AppServices;
-using Store.Application.Dtos.Login;
+using Store.Application.Dtos.Login.Request;
 using Store.Domain.Interface;
 using Store.Tests.Common.Builders.Entities;
 
@@ -12,21 +13,20 @@ namespace Store.ApplicationTests.AppServices
         private LoginAppService _loginAppService;
         private Fixture _fixture;
         private Mock<IUserRepository> _userRepositoryMock;
+        private Mock<INotifier> _notifierMock;
 
         public LoginAppServiceTest()
         {
             _fixture = new Fixture();
             _userRepositoryMock = new Mock<IUserRepository>();
+            _notifierMock = new Mock<INotifier>();
         }
-
-        
-
         
         [Fact]
         public async Task ShouldCreateUser()
         {
             var signUpRequestDto = _fixture.Create<SignUpRequestDto>();
-            _loginAppService = new LoginAppService(_userRepositoryMock.Object);
+            _loginAppService = new LoginAppService(_notifierMock.Object, _userRepositoryMock.Object);
 
             var response = await _loginAppService.SignUp(signUpRequestDto);
 
@@ -44,7 +44,7 @@ namespace Store.ApplicationTests.AppServices
             _userRepositoryMock.Setup(
                 x => x.GetByUsernameAsync(signUpRequestDto.UserName)).Returns(Task.FromResult(user));
 
-            _loginAppService = new LoginAppService(_userRepositoryMock.Object);
+            _loginAppService = new LoginAppService(_notifierMock.Object, _userRepositoryMock.Object);
 
             var response = await _loginAppService.SignUp(signUpRequestDto);
 

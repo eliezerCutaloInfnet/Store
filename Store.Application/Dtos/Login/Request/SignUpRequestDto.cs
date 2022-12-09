@@ -1,4 +1,4 @@
-﻿namespace Store.Application.Dtos.Login
+﻿namespace Store.Application.Dtos.Login.Request
 {
     public class SignUpRequestDto
     {

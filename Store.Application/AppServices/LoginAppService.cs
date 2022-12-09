@@ -1,34 +1,44 @@
 ﻿using Store.Application._shared;
-using Store.Application.Dtos.Login;
+using Store.Application.Dtos.Login.Request;
+using Store.Application.Dtos.Login.Response;
 using Store.Application.Interfaces;
 using Store.Domain.Entities;
 using Store.Domain.Interface;
 
 namespace Store.Application.AppServices
 {
-    public class LoginAppService : ILoginAppService
+    public class LoginAppService : AppService, ILoginAppService
     {
         private readonly IUserRepository _userRepository;
 
-        public LoginAppService(IUserRepository repository)
+        public LoginAppService(INotifier notifier, IUserRepository repository) : base(notifier)
         {
             _userRepository = repository;
         }
-        public async Task<AppServiceResponse> SignUp(SignUpRequestDto request)
+        public async Task<IAppServiceResponse> SignUp(SignUpRequestDto request)
         {
             var existentUser = await _userRepository.GetByUsernameAsync(request.UserName);
-
-            if (existentUser is not null)
-                return new AppServiceResponse(false, "User already exists");
+             
+            if (existentUser != null)
+            {
+                Notify("Username", "User already exists");
+                return new AppServiceResponse<ICollection<Notification>>(GetAllNotifications(), "Error Creating User", false);
+            }
+                
 
             var newUser = new User(request.Name, request.UserName, request.Password, request.Email);
 
             if (!newUser.IsValid())
-                return new AppServiceResponse(false, "Error to create user");
+            {
+                Notify(newUser.ValidationResult);
+
+                return new AppServiceResponse<ICollection<Notification>>(GetAllNotifications(), "Error Creating User", false);
+            }
+                
 
             await _userRepository.AddAsync(newUser);
 
-            return new AppServiceResponse(true, "User was created");
+            return new AppServiceResponse<SignUpResponseDto>(new SignUpResponseDto(newUser.Id, newUser.Username), "User Created Successfully", true);
 
         }
     }

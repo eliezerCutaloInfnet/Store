@@ -1,4 +1,4 @@
-﻿using Store.Domain.Notifications;
+﻿using FluentValidation.Results;
 
 namespace Store.Application._shared
 {
@@ -16,6 +16,12 @@ namespace Store.Application._shared
             _notifier = notifier;
         }
         #endregion Constructor
+
+        protected void Notify(ValidationResult validationResult)
+        {
+            foreach (var error in validationResult.Errors)
+                Notify(error.PropertyName, error.ErrorMessage);
+        }
 
         protected void Notify(string key, string mensagem)
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Domain._shared;
+using Store.Domain.Entities;
 using Store.Infra.Data.Context;
 
 namespace Store.Infra.Data._shared
@@ -7,7 +8,7 @@ namespace Store.Infra.Data._shared
     public class Repository<T> : IRepository<T> where T : Entity<T>
     {
         #region Protected fields
-        
+
         protected readonly AppDbContext _context;
         protected readonly DbSet<T> _dataset;
 
@@ -24,7 +25,16 @@ namespace Store.Infra.Data._shared
 
         public async Task AddAsync(T entity)
         {
+
             await _dataset.AddAsync(entity);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Update(T entity)
+        {
+            _dataset
+                .Update(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<T> GetAsync(Guid id)

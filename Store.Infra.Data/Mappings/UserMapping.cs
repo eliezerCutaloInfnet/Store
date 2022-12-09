@@ -35,6 +35,18 @@ namespace Store.Infra.Data.Mappings
                 .HasColumnName("EmailAddress")
                 .HasColumnType("nvarchar(200)")
                 .IsRequired();
+
+            builder
+                .Ignore(o => o.CascadeMode);
+
+            builder
+                .Ignore(o => o.ClassLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.RuleLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.ValidationResult);
         }
     }
 }

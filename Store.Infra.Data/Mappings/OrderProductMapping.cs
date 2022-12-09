@@ -41,6 +41,18 @@ namespace Store.Infra.Data.Mappings
                 .HasOne(op => op.Product)
                 .WithMany(p => p.OrderProducts)
                 .HasForeignKey(op => op.ProductId);
+
+            builder
+                .Ignore(o => o.CascadeMode);
+
+            builder
+                .Ignore(o => o.ClassLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.RuleLevelCascadeMode);
+
+            builder
+                .Ignore(o => o.ValidationResult);
         }
     }
 }

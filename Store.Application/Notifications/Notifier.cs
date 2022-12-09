@@ -1,6 +1,13 @@
-﻿namespace Store.Domain.Notifications
+﻿using Store.Application._shared;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Store.Application.Notifications
 {
-    public class Notifier
+    public class Notifier : INotifier
     {
         #region Fields
 

@@ -1,4 +1,4 @@
-using Store.Infra.IoC;
+using Store.Infra.CrossCutting;
 
 var builder = WebApplication.CreateBuilder(args);
 
