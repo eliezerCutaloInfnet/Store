@@ -85,6 +85,10 @@ Levantando banco de dados ```docker-compose up```
     - Comentários XML que irão auto contruir swagger
 
 
+### Criação do Diagrama C4 representando o que construimos
+
+![Diagrama C4](./docs/book-c4-model.png)
+
 ### Debates
 - OnPremise, Virtualização, Containerização e Serverless
 - S3
@@ -92,7 +96,7 @@ Levantando banco de dados ```docker-compose up```
 ## Links úteis
 
 #### Documentações e referencias
-- [AspnetCore 7](https://www.google.com)https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0)
+- [AspnetCore 7](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0)
 - [Arquitetura de referencia de microsservicos em .NET](https://github.com/dotnet-architecture/eShopOnContainers)
 - [Arquitetura serverless](https://blog.tecnospeed.com.br/o-que-e-arquitetura-serverless/)
 - [Singleton vs transient vs scoped](https://balta.io/blog/addtransient-addscoped-addsingleton)
@@ -109,9 +113,9 @@ Levantando banco de dados ```docker-compose up```
 
 #### Outros
 
-[DrawIo](draw.io)
-[Dapper vs EF vs ADO](https://exceptionnotfound.net/dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/)
-[Amazon S3](https://aws.amazon.com/pt/s3/pricing/?trk=c7f743d7-9b85-4db0-b6f1-d2387daa5845&sc_channel=ps&ef_id=EAIaIQobChMIsNv5v-v3-wIVpEVIAB0rjg3XEAAYASABEgIwnPD_BwE:G:s&s_kwcid=AL!4422!3!626321541794!p!!g!!s3)
-[Lambda Functions](https://aws.amazon.com/pt/lambda/)
-[AWS Toolkit for visual studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022)
-[Comparacao de servicos Azure vs AWS vs GCP](https://labs.sogeti.com/aws-vs-azure-vs-google-cloud-comparison/)
+- [DrawIo](draw.io)
+- [Dapper vs EF vs ADO](https://exceptionnotfound.net/- dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/)
+- [Amazon S3](https://aws.amazon.com/pt/s3/pricing/?trk=c7f743d7-9b85-4db0-b6f1-d2387daa5845&sc_channel=ps&ef_id=EAIaIQobChMIsNv5v-v3-wIVpEVIAB0rjg3XEAAYASABEgIwnPD_BwE:G:s&s_kwcid=AL!4422!3!626321541794!p!!g!!s3)
+- [Lambda Functions](https://aws.amazon.com/pt/lambda/)
+- [AWS Toolkit for visual studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022)
+- [Comparacao de servicos Azure vs AWS vs GCP](https://labs.sogeti.com/aws-vs-azure-vs-google-cloud-comparison/)
