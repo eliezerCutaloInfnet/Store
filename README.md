@@ -92,7 +92,7 @@ Levantando banco de dados ```docker-compose up```
 ## Links úteis
 
 #### Documentações e referencias
-- [AspnetCore 7](https://www.google.com)https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0
+- [AspnetCore 7](https://www.google.com)https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0)
 - [Arquitetura de referencia de microsservicos em .NET](https://github.com/dotnet-architecture/eShopOnContainers)
 - [Arquitetura serverless](https://blog.tecnospeed.com.br/o-que-e-arquitetura-serverless/)
 - [Singleton vs transient vs scoped](https://balta.io/blog/addtransient-addscoped-addsingleton)
