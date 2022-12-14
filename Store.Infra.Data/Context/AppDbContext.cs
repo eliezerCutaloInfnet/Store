@@ -15,7 +15,6 @@ namespace Store.Infra.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
             optionsBuilder.EnableSensitiveDataLogging();
         }
 
@@ -25,6 +24,7 @@ namespace Store.Infra.Data.Context
             modelBuilder.ApplyConfiguration(new ProductMapping());
             modelBuilder.ApplyConfiguration(new OrderMapping());
             modelBuilder.ApplyConfiguration(new OrderProductMapping());
+            modelBuilder.ApplyConfiguration(new BookMapping());
 
             base.OnModelCreating(modelBuilder);
         }

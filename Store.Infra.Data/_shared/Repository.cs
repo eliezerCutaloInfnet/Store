@@ -17,6 +17,7 @@ namespace Store.Infra.Data._shared
         #region Constructor
         public Repository(AppDbContext context)
         {
+            if(context== null) throw new ArgumentNullException("context");  
             _context = context;
             _dataset = _context.Set<T>();
         }

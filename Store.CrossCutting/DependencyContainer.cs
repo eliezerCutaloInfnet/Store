@@ -43,6 +43,9 @@ namespace Store.Infra.CrossCutting
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductAppService, ProductAppService>();
 
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IBookAppService, BookAppService>();
+
             return services;
         }
 
