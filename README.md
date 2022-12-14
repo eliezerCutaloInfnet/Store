@@ -114,7 +114,7 @@ Levantando banco de dados ```docker-compose up```
 #### Outros
 
 - [DrawIo](draw.io)
-- [Dapper vs EF vs ADO](https://exceptionnotfound.net/- dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/)
+- [Dapper vs EF vs ADO](https://exceptionnotfound.net/dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/)
 - [Amazon S3](https://aws.amazon.com/pt/s3/pricing/?trk=c7f743d7-9b85-4db0-b6f1-d2387daa5845&sc_channel=ps&ef_id=EAIaIQobChMIsNv5v-v3-wIVpEVIAB0rjg3XEAAYASABEgIwnPD_BwE:G:s&s_kwcid=AL!4422!3!626321541794!p!!g!!s3)
 - [Lambda Functions](https://aws.amazon.com/pt/lambda/)
 - [AWS Toolkit for visual studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022)
